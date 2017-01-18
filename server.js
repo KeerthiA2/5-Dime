@@ -401,7 +401,7 @@ app.post('/placeorder',function(req,res){
     
 });
 
-app.listen(5000,function(err)
+app.listen(port,function(err)
 {
 	console.log("running server on port "+port);
 	
