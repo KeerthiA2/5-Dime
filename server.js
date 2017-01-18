@@ -6,7 +6,8 @@ var products=require('./models/products_model');
 var user=require('./models/user_model');
  var cookieParser = require('cookie-parser');
   var  expressSession = require('express-session');
-var db=mongoose.connect('mongodb://userCIG:lSio300sKj3mJvgW@mongodb/sampledb');
+var db=mongoose.connect('mongodb://userCIG:lSio300sKj3mJvgW@mongodb/sampledb'); 
+/*var db=mongoose.connect('mongodb://localhost:27017/EcommerceDatabase');*/
  var warnings={"existingEmail":"","wrongCredentials":""};
    
 var bodyParser=require('body-parser');
@@ -17,8 +18,10 @@ app.use(bodyParser.json());
 
 
 
+/*
+var port=5000;
+*/
 var port=8080;
-
 app.use(expressSession({
     secret: 'a4f8071f-c873-4447-8ee2',
     cookie: { maxAge: 2628000000 },
@@ -398,7 +401,7 @@ app.post('/placeorder',function(req,res){
     
 });
 
-app.listen(port,function(err)
+app.listen(5000,function(err)
 {
 	console.log("running server on port "+port);
 	

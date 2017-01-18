@@ -12,7 +12,7 @@ myApp.controller("myController",['$scope','$http','$location','$localStorage',fu
         });
     $scope.product= $localStorage.productSpecific;
     $scope.refreshProductPage=function(){
-        
+        if($scope.product!=undefined){
         if($scope.product.department=="electronics")
             {
                 $scope.pshow=false;
@@ -26,6 +26,7 @@ myApp.controller("myController",['$scope','$http','$location','$localStorage',fu
             $scope.pshow=true;
             $scope.phide=false;
             console.log("other")
+        }
         }
     } ;
   /* $localStorage.wishLS=[];
