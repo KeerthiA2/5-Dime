@@ -1,0 +1,1 @@
+db.products.createIndex( { productName: "text", productDescription: "text" ,brand: "text",category: "text",department: "text",manufacturer: "text"   } )
